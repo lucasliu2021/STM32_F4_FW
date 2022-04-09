@@ -11,5 +11,7 @@ extern int32_t ADC_TEMP_Value;//AD转换结果
 extern float MCU_TEMP;//芯片温度
 extern float32_t ADC_IN10_voltage[256];//AD转换结果
 extern float32_t cycle;
+
 void ADC_FUNCTION(void);
+
 void cyc();//打算写的周期计算

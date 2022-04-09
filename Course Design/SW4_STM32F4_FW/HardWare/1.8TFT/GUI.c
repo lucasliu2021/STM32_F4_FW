@@ -643,14 +643,15 @@ void LCD_DrawWave(uint16_t wave[], uint16_t num, uint8_t drawline, uint16_t colm
         {
             Gui_DrawPoint(lie_size, j, BLACK);
         }
-        Gui_DrawPoint(lie_size, colm - (unsigned char) (wave[i*num/128] * heigh / 4095), color);
+        Gui_DrawPoint(lie_size, colm - (unsigned char) (wave[i * num / 128] * heigh / 4095), color);
 
         if ((i > 1) && (i < 128) && drawline)
         {
-            if ((wave[i*num/128] - wave[(i - 1)*num/128] > 74 || (wave[i*num/128] - wave[(i - 1)*num/128] < -74)))//4096/HIGH=74
+            if ((wave[i * num / 128] - wave[(i - 1) * num / 128] > 74 ||
+                 (wave[i * num / 128] - wave[(i - 1) * num / 128] < -74)))//4096/HIGH=74
 
-                Gui_DrawLine(lie_size, colm - (unsigned char) (wave[i*num/128] * heigh / 4095), lie_size + 1,
-                             colm - (unsigned char) (wave[(i - 1)*num/128] * heigh / 4095), color);
+                Gui_DrawLine(lie_size, colm - (unsigned char) (wave[i * num / 128] * heigh / 4095), lie_size + 1,
+                             colm - (unsigned char) (wave[(i - 1) * num / 128] * heigh / 4095), color);
         }
 
         i++;

@@ -6,7 +6,7 @@
 #include "arm_math.h"
 #include "fft.h"
 
-extern uint16_t DAC_Outputbuf[FFT_Len];
+extern __IO uint16_t DAC_Outputbuf[FFT_Len];
 
 void DSP_Sine(void);
 

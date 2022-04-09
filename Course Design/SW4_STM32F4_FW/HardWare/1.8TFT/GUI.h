@@ -2,7 +2,6 @@
 #include "main.h"
 
 
-
 //uint16_t LCD_BGR2RGB(uint16_t c);
 void Gui_Circle(uint16_t X, uint16_t Y, uint16_t R, uint16_t fc);
 

@@ -18,7 +18,7 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
     个人认为更正确的做法是在清除标志位之前延迟等待抖动消失，
      防止因抖动在此将中断标志位置为有效。
      即需要修改HAL库（Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c）中的“HAL_GPIO_EXTI_IRQHandler”函数。
-     在“__HAL_GPIO_EXTI_CLEAR_IT(GPIO_Pin);”之前添加延迟*/
+     在“__HAL_GPIO_EXTI_CLEAR_IT(GPIO_Pin);”之前和之后添加延迟，有效防止前后抖*/
 
     //每次按键后会初始化按键状态
     back = 0;
@@ -28,18 +28,40 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
     {
         //常用按键放在第一，加快处理速度
         case GPIO_PIN_2://切换
-            if (screen != 1)
+            if (select_within_screen != 1 && select_within_signal != 1 && select_within_setting != 1)
             {
                 task++;
             }
-            if (screen == 1)
+            if (select_within_screen == 1)//应用内选择
             {
-                if (light_mode < 3)
+                enter = 1;//保持进入
+                if (light_mode < 3)//屏幕亮度
                 {
                     light_mode++;
                 } else
                 {
                     light_mode = 0;
+                }
+            } else if (select_within_signal == 1)//应用内选择
+            {
+                enter = 1;//保持进入
+                if (signal_mode < 3)//信号发生器选择
+                {
+                    signal_mode++;
+                    Signal_mode_selection = 1;
+                } else
+                {
+                    signal_mode = 0;
+                }
+            } else if (select_within_setting == 1)//应用内选择
+            {
+                enter = 1;//保持进入
+                if (setting_mode < 1)//信号发生器选择
+                {
+                    setting_mode++;
+                } else
+                {
+                    setting_mode = 0;
                 }
             }
             clear = 1;
@@ -70,13 +92,13 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
         } else
         {
             pulse = 0;
-            HAL_GPIO_TogglePin(LED0_GPIO_Port, LED0_Pin);//清零提示
             //秒表
             if (watch == 1)//开启判断
             {
                 if (seconds < 60)
                 {
                     seconds++;
+                    HAL_GPIO_TogglePin(LED0_GPIO_Port, LED0_Pin);//清零提示
                 } else
                 {
                     seconds = 0;

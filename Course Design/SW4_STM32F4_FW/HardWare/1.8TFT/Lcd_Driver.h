@@ -1,9 +1,6 @@
 #include "main.h"
 
 
-
-
-
 //LCD重要参数集
 typedef struct
 {

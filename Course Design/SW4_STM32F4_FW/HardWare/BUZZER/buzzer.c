@@ -5,12 +5,17 @@
 #include "buzzer.h"
 #include "main.h"
 #include "delay.h"
+
+uint8_t buzzer_swtich;
+
 void buzzer()
 {
-    for (uint8_t i = 0; i < 100; ++i)
+    if (buzzer_swtich == 1)
     {
-        HAL_GPIO_TogglePin(BUZZER_GPIO_Port, BUZZER_Pin);
-        delay_us(50);//
+        for (uint8_t i = 0; i < 100; ++i)
+        {
+            HAL_GPIO_TogglePin(BUZZER_GPIO_Port, BUZZER_Pin);
+            delay_us(50);//
+        }
     }
-
 }

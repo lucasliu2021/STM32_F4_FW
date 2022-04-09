@@ -4,6 +4,6 @@
 #include "main.h"
 
 extern __IO uint8_t light_mode;
-extern uint8_t screen;
+extern uint8_t select_within_screen;
 
 void screen_light();

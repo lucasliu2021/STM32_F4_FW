@@ -93,7 +93,7 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
         //ศฮฮ๑ักิ๑
-        if (task < 8)
+        if (task < 12)
         {
             main_task(task, back, enter);
         } else

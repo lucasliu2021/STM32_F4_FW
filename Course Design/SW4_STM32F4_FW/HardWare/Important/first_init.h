@@ -22,7 +22,7 @@
 #include "../BUZZER/buzzer.h"
 #include "bar_timer.h"
 #include "screen_light.h"
-#include "bth_game.h"
+#include "Bluetooth_communication.h"
 #include "dac_function.h"
 //####3
 #include "about.h"
@@ -32,6 +32,7 @@
 #include "gallery.h"
 #include "uart.h"
 #include "retarget.h"//针对clion的printf重定向
+#include "setting.h"
 
 //####全局变量
 extern __IO uint16_t LCD_BLK;
@@ -40,5 +41,6 @@ extern __IO uint8_t task;
 extern __IO uint8_t clear;
 extern __IO uint8_t back;
 extern __IO uint8_t enter;
+extern __IO uint8_t signal_mode;//信号发生器模式
 //####函数声明
 void first_init();
