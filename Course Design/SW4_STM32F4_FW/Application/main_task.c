@@ -77,10 +77,15 @@ void main_task(uint8_t mode, uint8_t back, uint8_t enter)
             //进入任务执行
             if (inside(enter) == 1)
             {
-                //signal_generation();
+                screen = 1;
+                signal_generation();
             }
             //推出任务
             out(back);
+            if (back == 1)
+            {
+                screen = 0;
+            }
             break;
         case 3:
             //任务选中框

@@ -10,7 +10,7 @@ uint8_t screen;
 
 void screen_light()
 {
-
+    __HAL_TIM_SET_COMPARE(&htim9, TIM_CHANNEL_1, LCD_BLK);
     //»æÖÆ¾²Ì¬Êý¾Ý
     Gui_DrawFont_GBK16(0, 0, YELLOW, BLACK, "screen_light");
     Gui_DrawFont_GBK16(20, 20, WHITE, BLACK, "MAX");
