@@ -1,0 +1,10 @@
+2022-04-08
+
+串口通信++PWM调光
+
+
+1. 为了clion正常使用printf  建立retarget文件 keil用户自行剥离。
+
+2. 为了精简main文件，建立first_init文件使BEGIN2独立出来。不想使用自行剥离。
+
+3. PWM频率10khz

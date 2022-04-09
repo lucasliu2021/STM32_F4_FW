@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.21"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "SW4_STM32F4_FW_DAC",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "SW4_STM32F4_FW_DAC.elf::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-SW4_STM32F4_FW_DAC.elf-Debug-2591f56b0524138ce6e7.json",
+					"name" : "SW4_STM32F4_FW_DAC.elf",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/LEARN-LIFE/Junior/STM32F407VE/Firmware/7_DAC/SW4_STM32F4_FW_DAC/cmake-build-debug",
+		"source" : "D:/LEARN-LIFE/Junior/STM32F407VE/Firmware/7_DAC/SW4_STM32F4_FW_DAC"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}
