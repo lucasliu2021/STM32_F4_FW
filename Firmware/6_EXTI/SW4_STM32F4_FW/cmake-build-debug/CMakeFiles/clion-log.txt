@@ -1,0 +1,5 @@
+"C:\Program Files\JetBrains\CLion 2021.3.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" D:\LEARN-LIFE\Junior\STM32F407VE\Firmware\6_EXTI\SW4_STM32F4_FW_EXTI
+-- Minimal optimization, debug info included
+-- Configuring done
+-- Generating done
+-- Build files have been written to: D:/LEARN-LIFE/Junior/STM32F407VE/Firmware/6_EXTI/SW4_STM32F4_FW_EXTI/cmake-build-debug
