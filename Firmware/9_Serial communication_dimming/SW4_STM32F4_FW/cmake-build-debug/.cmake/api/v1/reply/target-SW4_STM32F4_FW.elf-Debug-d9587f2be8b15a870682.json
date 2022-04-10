@@ -189,55 +189,55 @@
 			[
 				{
 					"backtrace" : 13,
-					"path" : "D:/LEARN-LIFE/Junior/STM32F407VE/Firmware/9_Serial communication_dimming/SW4_STM32F4_FW/Core/Inc"
+					"path" : "D:/LEARN-LIFE/Junior/MAIN/STM32F407VE/Firmware/9_Serial communication_dimming/SW4_STM32F4_FW/Core/Inc"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/LEARN-LIFE/Junior/STM32F407VE/Firmware/9_Serial communication_dimming/SW4_STM32F4_FW/Drivers/STM32F4xx_HAL_Driver/Inc"
+					"path" : "D:/LEARN-LIFE/Junior/MAIN/STM32F407VE/Firmware/9_Serial communication_dimming/SW4_STM32F4_FW/Drivers/STM32F4xx_HAL_Driver/Inc"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/LEARN-LIFE/Junior/STM32F407VE/Firmware/9_Serial communication_dimming/SW4_STM32F4_FW/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy"
+					"path" : "D:/LEARN-LIFE/Junior/MAIN/STM32F407VE/Firmware/9_Serial communication_dimming/SW4_STM32F4_FW/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/LEARN-LIFE/Junior/STM32F407VE/Firmware/9_Serial communication_dimming/SW4_STM32F4_FW/Drivers/CMSIS/Device/ST/STM32F4xx/Include"
+					"path" : "D:/LEARN-LIFE/Junior/MAIN/STM32F407VE/Firmware/9_Serial communication_dimming/SW4_STM32F4_FW/Drivers/CMSIS/Device/ST/STM32F4xx/Include"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/LEARN-LIFE/Junior/STM32F407VE/Firmware/9_Serial communication_dimming/SW4_STM32F4_FW/Drivers/CMSIS/Include"
+					"path" : "D:/LEARN-LIFE/Junior/MAIN/STM32F407VE/Firmware/9_Serial communication_dimming/SW4_STM32F4_FW/Drivers/CMSIS/Include"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/LEARN-LIFE/Junior/STM32F407VE/Firmware/9_Serial communication_dimming/SW4_STM32F4_FW/HardWare"
+					"path" : "D:/LEARN-LIFE/Junior/MAIN/STM32F407VE/Firmware/9_Serial communication_dimming/SW4_STM32F4_FW/HardWare"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/LEARN-LIFE/Junior/STM32F407VE/Firmware/9_Serial communication_dimming/SW4_STM32F4_FW/HardWare/1.8TFT"
+					"path" : "D:/LEARN-LIFE/Junior/MAIN/STM32F407VE/Firmware/9_Serial communication_dimming/SW4_STM32F4_FW/HardWare/1.8TFT"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/LEARN-LIFE/Junior/STM32F407VE/Firmware/9_Serial communication_dimming/SW4_STM32F4_FW/HardWare/ADC"
+					"path" : "D:/LEARN-LIFE/Junior/MAIN/STM32F407VE/Firmware/9_Serial communication_dimming/SW4_STM32F4_FW/HardWare/ADC"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/LEARN-LIFE/Junior/STM32F407VE/Firmware/9_Serial communication_dimming/SW4_STM32F4_FW/HardWare/DAC"
+					"path" : "D:/LEARN-LIFE/Junior/MAIN/STM32F407VE/Firmware/9_Serial communication_dimming/SW4_STM32F4_FW/HardWare/DAC"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/LEARN-LIFE/Junior/STM32F407VE/Firmware/9_Serial communication_dimming/SW4_STM32F4_FW/HardWare/Delay"
+					"path" : "D:/LEARN-LIFE/Junior/MAIN/STM32F407VE/Firmware/9_Serial communication_dimming/SW4_STM32F4_FW/HardWare/Delay"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/LEARN-LIFE/Junior/STM32F407VE/Firmware/9_Serial communication_dimming/SW4_STM32F4_FW/DSP_LIB/Include"
+					"path" : "D:/LEARN-LIFE/Junior/MAIN/STM32F407VE/Firmware/9_Serial communication_dimming/SW4_STM32F4_FW/DSP_LIB/Include"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/LEARN-LIFE/Junior/STM32F407VE/Firmware/9_Serial communication_dimming/SW4_STM32F4_FW/HardWare/FFT"
+					"path" : "D:/LEARN-LIFE/Junior/MAIN/STM32F407VE/Firmware/9_Serial communication_dimming/SW4_STM32F4_FW/HardWare/FFT"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/LEARN-LIFE/Junior/STM32F407VE/Firmware/9_Serial communication_dimming/SW4_STM32F4_FW/HardWare/uart"
+					"path" : "D:/LEARN-LIFE/Junior/MAIN/STM32F407VE/Firmware/9_Serial communication_dimming/SW4_STM32F4_FW/HardWare/uart"
 				}
 			],
 			"language" : "C",
@@ -652,55 +652,55 @@
 			[
 				{
 					"backtrace" : 13,
-					"path" : "D:/LEARN-LIFE/Junior/STM32F407VE/Firmware/9_Serial communication_dimming/SW4_STM32F4_FW/Core/Inc"
+					"path" : "D:/LEARN-LIFE/Junior/MAIN/STM32F407VE/Firmware/9_Serial communication_dimming/SW4_STM32F4_FW/Core/Inc"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/LEARN-LIFE/Junior/STM32F407VE/Firmware/9_Serial communication_dimming/SW4_STM32F4_FW/Drivers/STM32F4xx_HAL_Driver/Inc"
+					"path" : "D:/LEARN-LIFE/Junior/MAIN/STM32F407VE/Firmware/9_Serial communication_dimming/SW4_STM32F4_FW/Drivers/STM32F4xx_HAL_Driver/Inc"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/LEARN-LIFE/Junior/STM32F407VE/Firmware/9_Serial communication_dimming/SW4_STM32F4_FW/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy"
+					"path" : "D:/LEARN-LIFE/Junior/MAIN/STM32F407VE/Firmware/9_Serial communication_dimming/SW4_STM32F4_FW/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/LEARN-LIFE/Junior/STM32F407VE/Firmware/9_Serial communication_dimming/SW4_STM32F4_FW/Drivers/CMSIS/Device/ST/STM32F4xx/Include"
+					"path" : "D:/LEARN-LIFE/Junior/MAIN/STM32F407VE/Firmware/9_Serial communication_dimming/SW4_STM32F4_FW/Drivers/CMSIS/Device/ST/STM32F4xx/Include"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/LEARN-LIFE/Junior/STM32F407VE/Firmware/9_Serial communication_dimming/SW4_STM32F4_FW/Drivers/CMSIS/Include"
+					"path" : "D:/LEARN-LIFE/Junior/MAIN/STM32F407VE/Firmware/9_Serial communication_dimming/SW4_STM32F4_FW/Drivers/CMSIS/Include"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/LEARN-LIFE/Junior/STM32F407VE/Firmware/9_Serial communication_dimming/SW4_STM32F4_FW/HardWare"
+					"path" : "D:/LEARN-LIFE/Junior/MAIN/STM32F407VE/Firmware/9_Serial communication_dimming/SW4_STM32F4_FW/HardWare"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/LEARN-LIFE/Junior/STM32F407VE/Firmware/9_Serial communication_dimming/SW4_STM32F4_FW/HardWare/1.8TFT"
+					"path" : "D:/LEARN-LIFE/Junior/MAIN/STM32F407VE/Firmware/9_Serial communication_dimming/SW4_STM32F4_FW/HardWare/1.8TFT"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/LEARN-LIFE/Junior/STM32F407VE/Firmware/9_Serial communication_dimming/SW4_STM32F4_FW/HardWare/ADC"
+					"path" : "D:/LEARN-LIFE/Junior/MAIN/STM32F407VE/Firmware/9_Serial communication_dimming/SW4_STM32F4_FW/HardWare/ADC"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/LEARN-LIFE/Junior/STM32F407VE/Firmware/9_Serial communication_dimming/SW4_STM32F4_FW/HardWare/DAC"
+					"path" : "D:/LEARN-LIFE/Junior/MAIN/STM32F407VE/Firmware/9_Serial communication_dimming/SW4_STM32F4_FW/HardWare/DAC"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/LEARN-LIFE/Junior/STM32F407VE/Firmware/9_Serial communication_dimming/SW4_STM32F4_FW/HardWare/Delay"
+					"path" : "D:/LEARN-LIFE/Junior/MAIN/STM32F407VE/Firmware/9_Serial communication_dimming/SW4_STM32F4_FW/HardWare/Delay"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/LEARN-LIFE/Junior/STM32F407VE/Firmware/9_Serial communication_dimming/SW4_STM32F4_FW/DSP_LIB/Include"
+					"path" : "D:/LEARN-LIFE/Junior/MAIN/STM32F407VE/Firmware/9_Serial communication_dimming/SW4_STM32F4_FW/DSP_LIB/Include"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/LEARN-LIFE/Junior/STM32F407VE/Firmware/9_Serial communication_dimming/SW4_STM32F4_FW/HardWare/FFT"
+					"path" : "D:/LEARN-LIFE/Junior/MAIN/STM32F407VE/Firmware/9_Serial communication_dimming/SW4_STM32F4_FW/HardWare/FFT"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "D:/LEARN-LIFE/Junior/STM32F407VE/Firmware/9_Serial communication_dimming/SW4_STM32F4_FW/HardWare/uart"
+					"path" : "D:/LEARN-LIFE/Junior/MAIN/STM32F407VE/Firmware/9_Serial communication_dimming/SW4_STM32F4_FW/HardWare/uart"
 				}
 			],
 			"language" : "ASM",
@@ -736,7 +736,7 @@
 			},
 			{
 				"backtrace" : 3,
-				"fragment" : "\"-Wl,-gc-sections,--print-memory-usage,-Map=D:/LEARN-LIFE/Junior/STM32F407VE/Firmware/9_Serial communication_dimming/SW4_STM32F4_FW/cmake-build-debug/SW4_STM32F4_FW.map\"",
+				"fragment" : "\"-Wl,-gc-sections,--print-memory-usage,-Map=D:/LEARN-LIFE/Junior/MAIN/STM32F407VE/Firmware/9_Serial communication_dimming/SW4_STM32F4_FW/cmake-build-debug/SW4_STM32F4_FW.map\"",
 				"role" : "flags"
 			},
 			{
@@ -761,7 +761,7 @@
 			},
 			{
 				"backtrace" : 5,
-				"fragment" : "\"D:/LEARN-LIFE/Junior/STM32F407VE/Firmware/9_Serial communication_dimming/SW4_STM32F4_FW/STM32F407VETx_FLASH.ld\"",
+				"fragment" : "\"D:/LEARN-LIFE/Junior/MAIN/STM32F407VE/Firmware/9_Serial communication_dimming/SW4_STM32F4_FW/STM32F407VETx_FLASH.ld\"",
 				"role" : "flags"
 			}
 		],
