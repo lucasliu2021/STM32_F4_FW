@@ -13,6 +13,7 @@ void first_init()
     Lcd_Init();
     Lcd_Clear(BLACK);
     //函数数组生成
+    windows(1);//加窗并生成窗函数
     //DSP_multSine();
     DSP_Sine();//正弦波数组
     //启动定时器
