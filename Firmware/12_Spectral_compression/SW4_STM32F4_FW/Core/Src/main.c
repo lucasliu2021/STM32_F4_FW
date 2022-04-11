@@ -113,6 +113,7 @@ int main(void)
     LCD_BLK_SET;//开启背光
     Lcd_Clear(BLACK);
     //函数数组生成
+    windows(1);//加窗并生成窗函数
     DSP_Sine();
     //启动定时器
     HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1);
