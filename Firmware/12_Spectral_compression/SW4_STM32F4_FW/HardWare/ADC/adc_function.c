@@ -11,12 +11,12 @@ uint16_t ADC_IN10_Value[256];//AD转换结果
 float32_t ADC_IN10_voltage[256];
 float32_t cycle;//计算信号的周期
 //窗函数
-uint16_t windows_Outputbuf[FFT_Len];
+float32_t windows_Outputbuf[FFT_Len];
 void windows(uint8_t enable)
 {
     for (uint16_t i = 0; i < FFT_Len; ++i)
     {
-        if (enable==1)
+        if (enable)
         {
             windows_Outputbuf[i]=0.539+0.46* arm_sin_f32(2*PI*i/FFT_Len+1.5*PI);
         }
@@ -24,7 +24,6 @@ void windows(uint8_t enable)
             windows_Outputbuf[i]=1;//矩形窗
         }
     }
-
 }
 
 void ADC_FUNCTION()
