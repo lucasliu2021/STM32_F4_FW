@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.21"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "SW4_STM32F4_FW",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "SW4_STM32F4_FW.elf::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-SW4_STM32F4_FW.elf-Debug-2b1ae124feccf54e0fbc.json",
+					"name" : "SW4_STM32F4_FW.elf",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/LEARN-LIFE/Junior/MAIN/STM32F407VET/STM32_F4_FW/Firmware/12_Spectral_compression/SW4_STM32F4_FW/cmake-build-debug",
+		"source" : "D:/LEARN-LIFE/Junior/MAIN/STM32F407VET/STM32_F4_FW/Firmware/12_Spectral_compression/SW4_STM32F4_FW"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}
