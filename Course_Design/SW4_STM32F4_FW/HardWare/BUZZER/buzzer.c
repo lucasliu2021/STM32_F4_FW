@@ -12,7 +12,7 @@ void buzzer()
 {
     if (buzzer_swtich == 1)
     {
-        for (uint8_t i = 0; i < 100; ++i)
+        for (uint8_t i = 0; i < 50; ++i)
         {
             HAL_GPIO_TogglePin(BUZZER_GPIO_Port, BUZZER_Pin);
             delay_us(50);//
