@@ -33,7 +33,8 @@
 #include "uart.h"
 #include "retarget.h"//针对clion的printf重定向
 #include "setting.h"
-
+#include "w25qxx.h"
+#include "wareroom.h"
 //####全局变量
 __IO extern uint16_t LCD_BLK;
 __IO extern uint16_t pulse;

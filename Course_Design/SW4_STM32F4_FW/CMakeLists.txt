@@ -67,6 +67,7 @@ include_directories(
         HardWare/uart
         HardWare/Important
         HardWare/BUZZER
+        HardWare/flash
 )
 
 add_definitions(-DUSE_HAL_DRIVER -DSTM32F407xx)
@@ -90,6 +91,7 @@ file(GLOB_RECURSE SOURCES
         "HardWare/uart/*.*"
         "HardWare/Important/*.*"
         "HardWare/BUZZER/*.*"
+        "HardWare/flash/*.*"
         )
 
 set(LINKER_SCRIPT ${CMAKE_SOURCE_DIR}/STM32F407VETx_FLASH.ld)

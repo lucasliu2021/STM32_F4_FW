@@ -1,16 +1,30 @@
 # 更新日志
 
 ---
-## 2022-04-12
+
+## 2022-04-15 V6.0
+
+1. 使用外部w25q16 flash芯片，把图库文件存放到外部
+2. 自定义指针函数，用作flash读取时的缓冲
+3. 优化图库显示逻辑，大幅度减少代码。
+4. show_pic_custm(ware_room_read(i));
+5. 将数组作为指针返回以供绘图读取
+6. RAM:  39.71% FLASH: 25.59%
+
+---
+
+## 2022-04-12 V5.0
 
 频谱压制
 
 ---
+
 ## 2022-04-10
 
 发现串口中断无法进入，标志位没有变化。
 
 ---
+
 ## 2022-04-09	V4.0
 
 1. 添加图库照片
@@ -25,12 +39,10 @@
 10. 波形函数并未完善，需要通过傅里叶变换合成。
 11. 所有功能基本完工。对于手机app配套开发，由于没有时间，不在研究
 12. 后续仅进行小BUG修复以及功能完善。不再进行二次开发。
-    Memory region         Used Size  Region Size  %age Used
-    RAM:        9936 B       128 KB      7.58%
-    CCMRAM:          0 GB        64 KB      0.00%
-    FLASH:      456928 B       512 KB     87.15%
+13. RAM:7.58% FLASH: 87.15%
 
 ---
+
 ## 2022-04-08	V3.0
 
 1. 大改动、精简main文件（只保留头文件以及main_task函数调用）
@@ -44,28 +56,20 @@
 9. 添加快速傅里叶变换
 10. 删除typedefine宏定义
 11. 直接更改HAL_GPIO_EXTI_IRQHandler，按键消抖。
-    Memory region         Used Size  Region Size  %age Used
-    RAM:        9832 B       128 KB      7.50%
-    CCMRAM:          0 GB        64 KB      0.00%
-    FLASH:      209624 B       512 KB     39.98%
+12. RAM:  7.50% FLASH: 39.98%
 
 ---
+
 ## 2022-03-26	V2.0
+
 1. 使用switch结构替换菜单控制
-
 2. 优化APP图标显示方式，降低FLASH占用
-
 3. 添加秒表功能
-
 4. 添加亮度控制（使用1khz 定时器9）
-
 5. 添加图库
-
 6. 添加蓝牙连接
-   Memory region         Used Size  Region Size  %age Used
-   RAM:        4288 B       128 KB      3.27%
-   CCMRAM:          0 GB        64 KB      0.00%
-   FLASH:      318240 B       512 KB     60.70%
+7. RAM:  3.27% FLASH: 60.70%
+
 ---
 
 ## 2022-03-25	V1.0

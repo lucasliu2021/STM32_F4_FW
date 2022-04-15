@@ -1,4 +1,4 @@
-# Install script for directory: D:/LEARN-LIFE/Junior/MAIN/STM32F407VET/STM32_F4_FW/Course_Design/SW4_STM32F4_FW
+# Install script for directory: D:/LEARN-LIFE/Junior/MAIN/STM32F407VET/Course_Design/SW4_STM32F4_FW
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "D:/LEARN-LIFE/Junior/MAIN/STM32F407VET/STM32_F4_FW/Course_Design/SW4_STM32F4_FW/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "D:/LEARN-LIFE/Junior/MAIN/STM32F407VET/Course_Design/SW4_STM32F4_FW/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

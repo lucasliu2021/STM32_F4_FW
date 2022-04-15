@@ -3,10 +3,11 @@
 //
 #include "main_task.h"
 #include "first_init.h"
-#include "pic.h"
 
 uint8_t open = 1;
 uint8_t place = 0;
+
+
 
 void out(uint8_t out);
 
@@ -26,13 +27,13 @@ void main_task(uint8_t mode, uint8_t back, uint8_t enter)
     //背景显示
     if (mode < 4 && open == 1)
     {
-        show_menu(gImage_first, open);
+        show_menu(ware_room_read(gImage_first), open);
     } else if (mode < 8 && open == 1)
     {
-        show_menu(gImage_second, open);
+        show_menu(ware_room_read(gImage_second), open);
     } else if (mode < 12 && open == 1)
     {
-        show_menu(gImage_third, open);
+        show_menu(ware_room_read(gImage_third), open);
     }
     //任务选择
     switch (mode)

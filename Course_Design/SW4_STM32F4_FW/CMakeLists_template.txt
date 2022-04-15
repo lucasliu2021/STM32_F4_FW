@@ -66,6 +66,7 @@ include_directories(
         HardWare/uart
         HardWare/Important
         HardWare/BUZZER
+        HardWare/flash
 )
 
 add_definitions(${defines})
@@ -89,6 +90,7 @@ file(GLOB_RECURSE SOURCES
         "HardWare/uart/*.*"
         "HardWare/Important/*.*"
         "HardWare/BUZZER/*.*"
+        "HardWare/flash/*.*"
         )
 
 set(LINKER_SCRIPT $${CMAKE_SOURCE_DIR}/${linkerScript})

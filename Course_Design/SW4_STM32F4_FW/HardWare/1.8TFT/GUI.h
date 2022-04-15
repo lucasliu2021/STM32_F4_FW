@@ -31,9 +31,10 @@ void LCD_ShowNum(uint16_t x, uint16_t y, uint32_t num, uint8_t len);
 
 void LCD_DrawWave(uint16_t wave[], uint16_t num, uint8_t drawline, uint16_t colm, uint16_t heigh, uint16_t color);
 
-void show_menu(const unsigned char gImage_pic[], int open);
+void show_menu(unsigned char gImage_pic[], int open);
 
 void LCD_DrawFFTWave(float wave[], uint8_t drawline, uint16_t colm, uint8_t high, uint16_t size,
                      uint16_t color);//drawline:是否连线，position：上下位置
 
 
+void show_pic_custm(uint8_t pic[]);

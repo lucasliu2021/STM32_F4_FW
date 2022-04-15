@@ -660,7 +660,7 @@ void LCD_DrawWave(uint16_t wave[], uint16_t num, uint8_t drawline, uint16_t colm
 }
 
 
-void show_menu(const unsigned char gImage_pic[], int open)
+void show_menu(unsigned char gImage_pic[], int open)
 {
 
     if (open == 1)
@@ -711,5 +711,24 @@ void LCD_DrawFFTWave(float wave[], uint8_t drawline, uint16_t colm, uint8_t high
         Gui_DrawPoint(i, colm - point[i], color); //根据屏幕分辨160*128和AD值进行换算
         if (drawline)
             Gui_DrawLine(i, colm - point[i], i, colm, color);//画竖线的程序
+    }
+}
+
+//自定义图片显示
+void show_pic_custm(uint8_t pic[])
+{
+    int i, j, k;
+    unsigned char picH, picL;
+    {
+        k = 0;
+        for (i = 0; i < 160; i++)
+            for (j = 0; j < 128; j++)
+            {
+                picH = pic[k++];
+                 picL = pic[k++];
+                 Lcd_WriteData(picH);
+                 Lcd_WriteData(picL);
+            }
+
     }
 }
