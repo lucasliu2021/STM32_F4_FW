@@ -68,6 +68,10 @@ include_directories(
         HardWare/Important
         HardWare/BUZZER
         HardWare/flash
+        USB_DEVICE/App
+        USB_DEVICE/Target
+        Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Inc
+        Middlewares/ST/STM32_USB_Device_Library/Core/Inc
 )
 
 add_definitions(-DUSE_HAL_DRIVER -DSTM32F407xx)
@@ -92,6 +96,10 @@ file(GLOB_RECURSE SOURCES
         "HardWare/Important/*.*"
         "HardWare/BUZZER/*.*"
         "HardWare/flash/*.*"
+        "USB_DEVICE/App/*.*"
+        "USB_DEVICE/Target/*.*"
+        "Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/*.*"
+        "Middlewares/ST/STM32_USB_Device_Library/Core/Src/*.*"
         )
 
 set(LINKER_SCRIPT ${CMAKE_SOURCE_DIR}/STM32F407VETx_FLASH.ld)

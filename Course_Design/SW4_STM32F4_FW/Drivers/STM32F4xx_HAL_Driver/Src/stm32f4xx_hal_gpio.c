@@ -106,7 +106,7 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f4xx_hal.h"
-#include "delay.h"
+
 /** @addtogroup STM32F4xx_HAL_Driver
   * @{
   */
@@ -494,7 +494,6 @@ void HAL_GPIO_EXTI_IRQHandler(uint16_t GPIO_Pin)
   /* EXTI line interrupt detected */
   if(__HAL_GPIO_EXTI_GET_IT(GPIO_Pin) != RESET)
   {
-      delay_ms(20);
     __HAL_GPIO_EXTI_CLEAR_IT(GPIO_Pin);
     HAL_GPIO_EXTI_Callback(GPIO_Pin);
   }
