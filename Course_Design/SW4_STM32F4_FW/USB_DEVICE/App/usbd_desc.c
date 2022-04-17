@@ -1,4 +1,22 @@
 /* USER CODE BEGIN Header */
+/**
+  ******************************************************************************
+  * @file           : App/usbd_desc.c
+  * @version        : v1.0_Cube
+  * @brief          : This file implements the USB device descriptors.
+  ******************************************************************************
+  * @attention
+  *
+  * <h2><center>&copy; Copyright (c) 2022 STMicroelectronics.
+  * All rights reserved.</center></h2>
+  *
+  * This software component is licensed by ST under Ultimate Liberty license
+  * SLA0044, the "License"; You may not use this file except in compliance with
+  * the License. You may obtain a copy of the License at:
+  *                             www.st.com/SLA0044
+  *
+  ******************************************************************************
+  */
 /* USER CODE END Header */
 
 /* Includes ------------------------------------------------------------------*/
@@ -7,6 +25,7 @@
 #include "usbd_conf.h"
 
 /* USER CODE BEGIN INCLUDE */
+
 /* USER CODE END INCLUDE */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -14,6 +33,8 @@
 /* Private macro -------------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
+/* Private variables ---------------------------------------------------------*/
+
 /* USER CODE END PV */
 
 /** @addtogroup STM32_USB_OTG_DEVICE_LIBRARY
@@ -30,6 +51,7 @@
   */
 
 /* USER CODE BEGIN PRIVATE_TYPES */
+
 /* USER CODE END PRIVATE_TYPES */
 
 /**
@@ -52,6 +74,7 @@
 #define USB_SIZ_BOS_DESC            0x0C
 
 /* USER CODE BEGIN PRIVATE_DEFINES */
+
 /* USER CODE END PRIVATE_DEFINES */
 
 /**
@@ -59,6 +82,7 @@
   */
 
 /* USER CODE BEGIN 0 */
+
 /* USER CODE END 0 */
 
 /** @defgroup USBD_DESC_Private_Macros USBD_DESC_Private_Macros
@@ -67,6 +91,7 @@
   */
 
 /* USER CODE BEGIN PRIVATE_MACRO */
+
 /* USER CODE END PRIVATE_MACRO */
 
 /**
@@ -298,6 +323,7 @@ uint8_t * USBD_FS_SerialStrDescriptor(USBD_SpeedTypeDef speed, uint16_t *length)
    * ID */
   Get_SerialNum();
   /* USER CODE BEGIN USBD_FS_SerialStrDescriptor */
+
   /* USER CODE END USBD_FS_SerialStrDescriptor */
   return (uint8_t *) USBD_StringSerial;
 }

@@ -178,7 +178,6 @@ USBD_StorageTypeDef USBD_Storage_Interface_fops_FS =
 int8_t STORAGE_Init_FS(uint8_t lun)
 {
   /* USER CODE BEGIN 2 */
-   W25qxx_Init ();
   return (USBD_OK);
   /* USER CODE END 2 */
 }
@@ -231,10 +230,8 @@ int8_t STORAGE_IsWriteProtected_FS(uint8_t lun)
 int8_t STORAGE_Read_FS(uint8_t lun, uint8_t *buf, uint32_t blk_addr, uint16_t blk_len)
 {
   /* USER CODE BEGIN 6 */
-
-    W25qxx_ReadSector(buf, blk_addr*STORAGE_BLK_SIZ, 0,blk_len*STORAGE_BLK_SIZ);
-
-    return (USBD_OK);
+    W25qxx_ReadSector(buf,blk_addr*STORAGE_BLK_SIZ,0,blk_len*STORAGE_BLK_SIZ);
+  return (USBD_OK);
   /* USER CODE END 6 */
 }
 
@@ -247,7 +244,7 @@ int8_t STORAGE_Write_FS(uint8_t lun, uint8_t *buf, uint32_t blk_addr, uint16_t b
 {
   /* USER CODE BEGIN 7 */
     W25qxx_EraseSector(blk_addr*STORAGE_BLK_SIZ);
-   W25qxx_WriteSector((uint8_t *)buf,blk_addr*STORAGE_BLK_SIZ,0,blk_len*STORAGE_BLK_SIZ);
+    W25qxx_WriteSector(buf,blk_addr*STORAGE_BLK_SIZ,0,blk_len*STORAGE_BLK_SIZ);
     return (USBD_OK);
   /* USER CODE END 7 */
 }

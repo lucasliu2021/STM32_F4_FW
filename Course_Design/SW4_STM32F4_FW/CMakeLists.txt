@@ -72,6 +72,9 @@ include_directories(
         USB_DEVICE/Target
         Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Inc
         Middlewares/ST/STM32_USB_Device_Library/Core/Inc
+        FATFS/App
+        FATFS/Target
+        Middlewares/Third_Party/FatFs/src
 )
 
 add_definitions(-DUSE_HAL_DRIVER -DSTM32F407xx)
@@ -100,8 +103,11 @@ file(GLOB_RECURSE SOURCES
         "USB_DEVICE/Target/*.*"
         "Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src/*.*"
         "Middlewares/ST/STM32_USB_Device_Library/Core/Src/*.*"
+        "FATFS/App/*.*"
+        "FATFS/Target/*.*"
+        "Middlewares/Third_Party/FatFs/src/option/*.*"
+        "Middlewares/Third_Party/FatFs/src/*.*"
         )
-
 set(LINKER_SCRIPT ${CMAKE_SOURCE_DIR}/STM32F407VETx_FLASH.ld)
 
 add_link_options(-Wl,-gc-sections,--print-memory-usage,-Map=${PROJECT_BINARY_DIR}/${PROJECT_NAME}.map)

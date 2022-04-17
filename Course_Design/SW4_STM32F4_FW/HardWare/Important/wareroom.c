@@ -9,7 +9,7 @@ unsigned char flash_buffer[40960];
 
 unsigned char *ware_room_read(uint8_t num)
 {
-    W25qxx_ReadBlock(flash_buffer, num, 0, 40960);
+   W25qxx_ReadBlock(flash_buffer, num, 0, 40960);
     return flash_buffer;
 }
 
