@@ -39,5 +39,5 @@ void first_init()
     printf("already powered on\r\n");//魔法棒里的Target选项卡里一定要勾选Use MicroLIB
     HAL_UART_Receive_IT(&huart1, (uint8_t *) uart1_rx_buf, 2);//开启串口接收中断允许 不开启就只能接收一次
 
-
+    //FatfsTest();//文件测试
 }

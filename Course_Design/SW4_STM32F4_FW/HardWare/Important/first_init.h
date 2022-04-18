@@ -35,6 +35,8 @@
 #include "setting.h"
 #include "w25qxx.h"
 #include "wareroom.h"
+#include "W25Q16.h"
+
 //####全局变量
 __IO extern uint16_t LCD_BLK;
 __IO extern uint16_t pulse;
