@@ -1,7 +1,7 @@
 
 #include "w25qxxConf.h"
 #include "w25qxx.h"
-#include "delay.h"
+//#include "delay.h"
 #if (_W25QXX_DEBUG == 1)
 #include <stdio.h>
 #endif
@@ -15,7 +15,7 @@ extern SPI_HandleTypeDef _W25QXX_SPI;
 #include "cmsis_os.h"
 #else
 //#define W25qxx_Delay(delay) HAL_Delay(delay)
-#define W25qxx_Delay(delay) delay_ms(delay)
+#define W25qxx_Delay(delay)// delay_ms(delay)
 #endif
 //###################################################################################################################
 uint8_t W25qxx_Spi(uint8_t Data)
@@ -129,7 +129,7 @@ void W25qxx_WaitForWriteEnd(void)
 bool W25qxx_Init(void)
 {
 	w25qxx.Lock = 1;
-	while (HAL_GetTick() < 100)
+	//while (HAL_GetTick() < 100)
 		W25qxx_Delay(1);
 	HAL_GPIO_WritePin(_W25QXX_CS_GPIO, _W25QXX_CS_PIN, GPIO_PIN_SET);
 	W25qxx_Delay(100);

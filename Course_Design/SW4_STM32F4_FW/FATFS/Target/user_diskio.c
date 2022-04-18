@@ -44,6 +44,12 @@
 /* Disk status */
 static volatile DSTATUS Stat = STA_NOINIT;
 
+#define PAGE_SIZE 256
+#define SECTOR_SIZE 4096
+#define SECTOR_COUNT 512
+#define BLOCK_SIZE 65536
+#define FLASH_PAGES_PER_SECTOR SECTOR_SIZE / PAGE_SIZE
+
 /* USER CODE END DECL */
 
 /* Private function prototypes -----------------------------------------------*/

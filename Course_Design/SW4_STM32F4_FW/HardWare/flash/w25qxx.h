@@ -1,6 +1,36 @@
 #ifndef _W25QXX_H
 #define _W25QXX_H
 
+/*
+  Author:     Nima Askari
+  WebSite:    http://www.github.com/NimaLTD
+  Instagram:  http://instagram.com/github.NimaLTD
+  Youtube:    https://www.youtube.com/channel/UCUhY7qY1klJm1d2kulr9ckw
+  
+  Version:    1.1.4
+  
+  
+  Reversion History:
+  
+  (1.1.4)
+  Fix W25qxx_IsEmptySector function.
+  
+  (1.1.3)
+  Fix Erase and write sector in w25q256 and w25q512.
+
+  (1.1.2)
+  Fix read ID.
+  
+  (1.1.1)
+  Fix some errors.
+  
+  (1.1.0)
+  Fix some errors.
+  
+  (1.0.0)
+  First release.
+*/
+
 #ifdef __cplusplus
 extern "C"
 {

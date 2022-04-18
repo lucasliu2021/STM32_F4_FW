@@ -21,9 +21,8 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "usbd_storage_if.h"
-
 /* USER CODE BEGIN INCLUDE */
-#include "w25qxx.h"
+#include "W25Q16.h"
 /* USER CODE END INCLUDE */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -63,11 +62,15 @@
   * @{
   */
 
+//#define STORAGE_LUN_NBR                  1
+//#define STORAGE_BLK_NBR                  0x10000
+//#define STORAGE_BLK_SIZ                  0x200
+
+/* USER CODE BEGIN PRIVATE_DEFINES */
+
 #define STORAGE_LUN_NBR                  1
 #define STORAGE_BLK_NBR                  512
 #define STORAGE_BLK_SIZ                  4096
-
-/* USER CODE BEGIN PRIVATE_DEFINES */
 
 /* USER CODE END PRIVATE_DEFINES */
 
@@ -97,19 +100,19 @@
 /** USB Mass storage Standard Inquiry Data. */
 const int8_t STORAGE_Inquirydata_FS[] = {/* 36 */
 
-  /* LUN 0 */
-  0x00,
-  0x80,
-  0x02,
-  0x02,
-  (STANDARD_INQUIRY_DATA_LEN - 5),
-  0x00,
-  0x00,
-  0x00,
-  'S', 'T', 'M', ' ', ' ', ' ', ' ', ' ', /* Manufacturer : 8 bytes */
-  'P', 'r', 'o', 'd', 'u', 'c', 't', ' ', /* Product      : 16 Bytes */
-  ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
-  '0', '.', '0' ,'1'                      /* Version      : 4 Bytes */
+        /* LUN 0 */
+        0x00,
+        0x80,
+        0x02,
+        0x02,
+        (STANDARD_INQUIRY_DATA_LEN - 5),
+        0x00,
+        0x00,
+        0x00,
+        'S', 'T', 'M', ' ', ' ', ' ', ' ', ' ', /* Manufacturer : 8 bytes */
+        'P', 'r', 'o', 'd', 'u', 'c', 't', ' ', /* Product      : 16 Bytes */
+        ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ',
+        '0', '.', '0', '1'                      /* Version      : 4 Bytes */
 };
 /* USER CODE END INQUIRY_DATA_FS */
 
@@ -142,11 +145,17 @@ extern USBD_HandleTypeDef hUsbDeviceFS;
   */
 
 static int8_t STORAGE_Init_FS(uint8_t lun);
+
 static int8_t STORAGE_GetCapacity_FS(uint8_t lun, uint32_t *block_num, uint16_t *block_size);
+
 static int8_t STORAGE_IsReady_FS(uint8_t lun);
+
 static int8_t STORAGE_IsWriteProtected_FS(uint8_t lun);
+
 static int8_t STORAGE_Read_FS(uint8_t lun, uint8_t *buf, uint32_t blk_addr, uint16_t blk_len);
+
 static int8_t STORAGE_Write_FS(uint8_t lun, uint8_t *buf, uint32_t blk_addr, uint16_t blk_len);
+
 static int8_t STORAGE_GetMaxLun_FS(void);
 
 /* USER CODE BEGIN PRIVATE_FUNCTIONS_DECLARATION */
@@ -158,16 +167,16 @@ static int8_t STORAGE_GetMaxLun_FS(void);
   */
 
 USBD_StorageTypeDef USBD_Storage_Interface_fops_FS =
-{
-  STORAGE_Init_FS,
-  STORAGE_GetCapacity_FS,
-  STORAGE_IsReady_FS,
-  STORAGE_IsWriteProtected_FS,
-  STORAGE_Read_FS,
-  STORAGE_Write_FS,
-  STORAGE_GetMaxLun_FS,
-  (int8_t *)STORAGE_Inquirydata_FS
-};
+        {
+                STORAGE_Init_FS,
+                STORAGE_GetCapacity_FS,
+                STORAGE_IsReady_FS,
+                STORAGE_IsWriteProtected_FS,
+                STORAGE_Read_FS,
+                STORAGE_Write_FS,
+                STORAGE_GetMaxLun_FS,
+                (int8_t *) STORAGE_Inquirydata_FS
+        };
 
 /* Private functions ---------------------------------------------------------*/
 /**
@@ -177,9 +186,9 @@ USBD_StorageTypeDef USBD_Storage_Interface_fops_FS =
   */
 int8_t STORAGE_Init_FS(uint8_t lun)
 {
-  /* USER CODE BEGIN 2 */
-  return (USBD_OK);
-  /* USER CODE END 2 */
+    /* USER CODE BEGIN 2 */
+    return (USBD_OK);
+    /* USER CODE END 2 */
 }
 
 /**
@@ -191,11 +200,11 @@ int8_t STORAGE_Init_FS(uint8_t lun)
   */
 int8_t STORAGE_GetCapacity_FS(uint8_t lun, uint32_t *block_num, uint16_t *block_size)
 {
-  /* USER CODE BEGIN 3 */
-  *block_num  = STORAGE_BLK_NBR;
-  *block_size = STORAGE_BLK_SIZ;
-  return (USBD_OK);
-  /* USER CODE END 3 */
+    /* USER CODE BEGIN 3 */
+    *block_num = STORAGE_BLK_NBR;
+    *block_size = STORAGE_BLK_SIZ;
+    return (USBD_OK);
+    /* USER CODE END 3 */
 }
 
 /**
@@ -205,9 +214,13 @@ int8_t STORAGE_GetCapacity_FS(uint8_t lun, uint32_t *block_num, uint16_t *block_
   */
 int8_t STORAGE_IsReady_FS(uint8_t lun)
 {
-  /* USER CODE BEGIN 4 */
-  return (USBD_OK);
-  /* USER CODE END 4 */
+    /* USER CODE BEGIN 4 */
+    if (W25QXX_ReadID() != 0)
+        return (USBD_OK);
+    else
+        return -1;
+//	return (USBD_OK);
+    /* USER CODE END 4 */
 }
 
 /**
@@ -217,9 +230,9 @@ int8_t STORAGE_IsReady_FS(uint8_t lun)
   */
 int8_t STORAGE_IsWriteProtected_FS(uint8_t lun)
 {
-  /* USER CODE BEGIN 5 */
-  return (USBD_OK);
-  /* USER CODE END 5 */
+    /* USER CODE BEGIN 5 */
+    return (USBD_OK);
+    /* USER CODE END 5 */
 }
 
 /**
@@ -229,10 +242,16 @@ int8_t STORAGE_IsWriteProtected_FS(uint8_t lun)
   */
 int8_t STORAGE_Read_FS(uint8_t lun, uint8_t *buf, uint32_t blk_addr, uint16_t blk_len)
 {
-  /* USER CODE BEGIN 6 */
-    W25qxx_ReadSector(buf,blk_addr*STORAGE_BLK_SIZ,0,blk_len*STORAGE_BLK_SIZ);
-  return (USBD_OK);
-  /* USER CODE END 6 */
+    /* USER CODE BEGIN 6 */
+    HAL_GPIO_TogglePin(LED0_GPIO_Port, LED0_Pin);
+    uint16_t i = 0;
+
+    for (i = 0; i < blk_len; i++)
+    {
+        W25QXX_Read(buf + i * STORAGE_BLK_SIZ, blk_addr * STORAGE_BLK_SIZ + i * STORAGE_BLK_SIZ, STORAGE_BLK_SIZ);
+    }
+    return (USBD_OK);
+    /* USER CODE END 6 */
 }
 
 /**
@@ -242,11 +261,18 @@ int8_t STORAGE_Read_FS(uint8_t lun, uint8_t *buf, uint32_t blk_addr, uint16_t bl
   */
 int8_t STORAGE_Write_FS(uint8_t lun, uint8_t *buf, uint32_t blk_addr, uint16_t blk_len)
 {
-  /* USER CODE BEGIN 7 */
-    W25qxx_EraseSector(blk_addr*STORAGE_BLK_SIZ);
-    W25qxx_WriteSector(buf,blk_addr*STORAGE_BLK_SIZ,0,blk_len*STORAGE_BLK_SIZ);
+    /* USER CODE BEGIN 7 */
+    HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
+    uint16_t i = 0;
+
+    for (i = 0; i < blk_len; i++)
+    {
+        W25QXX_Write((uint8_t *) (buf + i * STORAGE_BLK_SIZ), blk_addr * STORAGE_BLK_SIZ + i * STORAGE_BLK_SIZ,
+                     STORAGE_BLK_SIZ);
+    }
+
     return (USBD_OK);
-  /* USER CODE END 7 */
+    /* USER CODE END 7 */
 }
 
 /**
@@ -256,9 +282,9 @@ int8_t STORAGE_Write_FS(uint8_t lun, uint8_t *buf, uint32_t blk_addr, uint16_t b
   */
 int8_t STORAGE_GetMaxLun_FS(void)
 {
-  /* USER CODE BEGIN 8 */
-  return (STORAGE_LUN_NBR - 1);
-  /* USER CODE END 8 */
+    /* USER CODE BEGIN 8 */
+    return (STORAGE_LUN_NBR - 1);
+    /* USER CODE END 8 */
 }
 
 /* USER CODE BEGIN PRIVATE_FUNCTIONS_IMPLEMENTATION */
