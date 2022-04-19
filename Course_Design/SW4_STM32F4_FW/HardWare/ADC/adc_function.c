@@ -47,8 +47,36 @@ void ADC_FUNCTION()
 }
 
 
-void cyc()//信号周期的计算
+struct signal_info_st
 {
-    //不写了
+    uint8_t frequency;//信号频率
+    float32_t Voltage;//电压
 
+} signal_info_st = {0, 0};
+
+//求周期跟求频率是一码事。用傅立叶变换，找基波的频率。
+void signal_info()//信号信息计算
+{
+    signal_info_st.frequency = 0;
+    signal_info_st.Voltage = ADC_IN10_voltage[0];
+    for (uint16_t k = 0; k < 256; k++)
+    {
+        if (ADC_IN10_voltage[k] > signal_info_st.Voltage)
+        {
+            signal_info_st.Voltage = ADC_IN10_voltage[k];
+        }
+    }
+
+    float32_t a=FFT_MAG_Outputdata[1];
+    for (uint16_t k = 1; k < 256; k++)
+    {
+        if (FFT_MAG_Outputdata[k] > a)
+        {
+            a = FFT_MAG_Outputdata[k];
+            signal_info_st.frequency=k;
+        }
+    }
+
+    LCD_ShowNum(23, 30, signal_info_st.frequency, 2);
+    LCD_ShowNum(85, 30, (uint32_t) signal_info_st.Voltage, 2);
 }

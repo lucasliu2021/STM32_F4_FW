@@ -3,12 +3,22 @@
 //
 
 #include "interrupt_callback_function.h"
-
+#include "delay.h"
 __IO uint8_t task = 0;
 __IO uint8_t clear = 0;
 __IO uint8_t back = 0;
 __IO uint8_t enter = 0;
 
+void HAL_GPIO_EXTI_IRQHandler(uint16_t GPIO_Pin)
+{
+    /* EXTI line interrupt detected */
+    if(__HAL_GPIO_EXTI_GET_IT(GPIO_Pin) != RESET)
+    {
+        delay_ms(20);
+        __HAL_GPIO_EXTI_CLEAR_IT(GPIO_Pin);
+        HAL_GPIO_EXTI_Callback(GPIO_Pin);
+    }
+}
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
 /*    初始化控制按键

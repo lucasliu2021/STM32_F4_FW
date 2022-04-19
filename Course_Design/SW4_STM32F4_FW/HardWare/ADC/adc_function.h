@@ -14,4 +14,4 @@ extern float32_t cycle;
 
 void ADC_FUNCTION(void);
 void windows(uint8_t enable);
-void cyc();//打算写的周期计算
+void signal_info();//信号信息计算

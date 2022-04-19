@@ -27,13 +27,13 @@ void main_task(uint8_t mode, uint8_t back, uint8_t enter)
     //背景显示
     if (mode < 4 && open == 1)
     {
-        show_menu(ware_room_read(gImage_first), open);
+        show_menu(binDisplay("SYSTEM/desktop1.bin"), open);
     } else if (mode < 8 && open == 1)
     {
-        show_menu(ware_room_read(gImage_second), open);
+        show_menu(binDisplay("SYSTEM/desktop2.bin"), open);
     } else if (mode < 12 && open == 1)
     {
-        show_menu(ware_room_read(gImage_third), open);
+        show_menu(binDisplay("SYSTEM/desktop3.bin"), open);
     }
     //任务选择
     switch (mode)
